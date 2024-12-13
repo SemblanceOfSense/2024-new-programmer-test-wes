@@ -72,6 +72,10 @@ public class RobotContainer {
             new RunCommand(() -> swerveSubsystem.zeroGyro())
     );
 
+    new JoystickButton(primaryController, XboxController.Button.kX.value).whileTrue(
+        new IntakeCommand(new IntakeSubsystem())
+    );
+
 //    new JoystickButton(primaryController, XboxController.Button.kA.value).whileTrue(
 //            new PathCommand(swerveSubsystem, 0, 0, 0)
 //    );
